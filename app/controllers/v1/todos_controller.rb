@@ -20,7 +20,7 @@ module V1
     end
 
     def destroy
-      todo = todo.find(params[:id])
+      todo = Todo.find(params[:id])
       todo.destroy
       render json: { status: 'SUCCESS', message: 'deleted the todo', data: todo }
     end
