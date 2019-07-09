@@ -49,6 +49,8 @@ test:
 #
 production:
   <<: *default
-  database: rails_api_production
-  username: rails_api
-  password: <%= ENV['RAILS_API_DATABASE_PASSWORD'] %>
+  database: <%= ENV['DB_NAME'] %>
+  username: <%= ENV['DB_USERNAME'] %>
+  password: <%= ENV['DB_PASSWORD'] %>
+  host: <%= ENV['DB_HOSTNAME'] %>
+  port: <%= ENV['DB_PORT'] %>
