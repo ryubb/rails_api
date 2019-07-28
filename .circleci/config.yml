@@ -43,5 +43,4 @@ jobs:
             fi
         -run:
           name: heroku db:migrate
-          command: 
-            heroku run db:migrate
+          command: heroku run db:migrate --app ${HEROKU_APP_NAME}
