@@ -11,7 +11,7 @@ module V1
     end
 
     def create
-      task = Taskt.new(task_params)
+      task = Task.new(task_params)
       if task.save
         render json: { status: 'SUCCESS', message: 'loaded the task', data: task }
       else
